@@ -1,0 +1,38 @@
+<mvc:View xmlns:u="sap.ui.unified" xmlns:l="sap.ui.layout" xmlns:core="sap.ui.core" xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc"
+	displayBlock="true" controllerName="NGI1.Ferreterias.controller.App1Table" height="100%">
+	<Page id="tableLocalSales" title="{i18n>locals}" navButtonPress="onNavPress" showNavButton="true">
+		<headerContent>
+			<u:FileUploader id="fileUpload" placeholder="{i18n>placeholderExcel}" iconOnly="true" buttonOnly="true" icon="sap-icon://excel-attachment"
+				multiple="true" sameFilenameAllowed="true" fileType="xlsx,xls" change=".uploadExcelModel"/>
+		</headerContent>
+		<Panel>
+			<HBox justifyContent="Center">
+				<VBox>
+					<SearchField id="SearchField1" width="auto" search="handleSearchEspec" placeholder="{i18n>IDLOCAL}" showSearchButton="false"></SearchField>
+					<SearchField id="SearchField" width="auto" search="handleSearchEspec" placeholder="{i18n>NOMBRELOCAL}" showSearchButton="false"></SearchField>
+				</VBox>
+				<HBox width="10px"></HBox>
+				<Button text="{i18n>buttonFilter}" press="onFilter"></Button>
+			</HBox>
+		</Panel>
+		<Table id="productsTable" mode="SingleSelectMaster" itemPress="handleListPress" inset="false" items="{/LOCALSet}"
+			class="sapFDynamicPageAlignContent" width="auto">
+			<columns>
+				<Column width="12em">
+					<Text text="{i18n>IDLOCAL}"/>
+				</Column>
+				<Column hAlign="End">
+					<Text text="{i18n>NOMBRELOCAL}"/>
+				</Column>
+			</columns>
+			<items>
+				<ColumnListItem type="Navigation">
+					<cells>
+						<ObjectIdentifier text="{path:'IDLOCAL', formatter:'.formatter.formatInitZeros'}"/>
+						<ObjectIdentifier text="{NOMBRELOCAL}"/>
+					</cells>
+				</ColumnListItem>
+			</items>
+		</Table>
+	</Page>
+</mvc:View>

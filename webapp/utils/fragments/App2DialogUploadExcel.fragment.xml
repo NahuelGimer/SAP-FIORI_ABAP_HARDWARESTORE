@@ -1,0 +1,76 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:u="sap.ui.unified">
+	<Dialog id="_myDialog" title="{i18n>excelProductsTitle}" state="None">
+		<content>
+			<HBox height="15px"></HBox>
+			<HBox>
+				<HBox width="10px"></HBox>
+				<VBox>
+					<Text text="{i18n>IDProperties}"></Text>
+					<HBox height="10px"></HBox>
+					<Text text="{i18n>nameProperties}"></Text>
+					<HBox height="10px"></HBox>
+					<Text text="{i18n>valueProperties}"></Text>
+					<HBox height="10px"></HBox>
+					<Text text="{i18n>stockProperties}"></Text>
+				</VBox>
+			</HBox>
+			<HBox height="15px"></HBox>
+			<Table items="{excelModel>/}">
+				<columns>
+					<Column>
+						<header>
+							<Label text="{i18n>IDLOCAL}"/>
+						</header>
+					</Column>
+					<Column>
+						<header>
+							<Label text="{i18n>NOMBRELOCAL}"/>
+						</header>
+					</Column>
+					<Column>
+						<header>
+							<Label text="{i18n>IDPRODUCTO}"/>
+						</header>
+					</Column>
+					<Column>
+						<header>
+							<Label text="{i18n>NOMBREPRODUCTO}"/>
+						</header>
+					</Column>
+					<Column>
+						<header>
+							<Label text="{i18n>VALOR}"/>
+						</header>
+					</Column>
+					<Column>
+						<header>
+							<Label text="{i18n>IDSTOCK}"/>
+						</header>
+					</Column>
+					<Column>
+						<header>
+							<Label text="{i18n>CANTIDADSTOCK}"/>
+						</header>
+					</Column>
+				</columns>
+				<items>
+					<ColumnListItem>
+						<cells>
+							<Input value="{excelModel>IDLOCAL}"/>
+							<Input value="{excelModel>NOMBRELOCAL}"/>
+							<Input value="{excelModel>IDPRODUCTO}"/>
+							<Input value="{excelModel>NOMBREPRODUCTO}"/>
+							<Input value="{excelModel>VALOR}"/>
+							<Input value="{excelModel>IDSTOCK}"/>
+							<Input value="{excelModel>CANTIDADSTOCK}"/>
+						</cells>
+					</ColumnListItem>
+				</items>
+			</Table>
+		</content>
+		<buttons>
+			<Button text="{i18n>buttonAcceptExcel}" press="uploadExcelFiles"/>
+			<Button text="{i18n>buttonCancel}" press="closeUploadExcelDialog"/>
+		</buttons>
+	</Dialog>
+</core:FragmentDefinition>

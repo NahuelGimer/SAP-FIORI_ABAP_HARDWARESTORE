@@ -1,0 +1,89 @@
+.sapMStdTileIconDiv {
+	margin-top:55px !important;
+	margin-left:20px !important;
+}
+
+.sapMStdTileTopRow {
+    height:11rem !important;
+}
+
+.tileStyle {
+	border-radius:100%;
+	overflow:hidden;
+}
+
+.sapMStdTileMonitorType {
+	background-color:#f8f8f9 !important;
+}
+
+.sapMTile:active {
+    background-color: #0854a0 !important;
+}
+
+.sapMTile:active .sapMStdTileMonitorType {
+	background-color:#0854a0 !important;
+}
+
+#__tile0, #__tile1, #__tile2, #__tile3, #__tile4, #__tile5, #__tile6, #__tile7, #__tile8, #__tile9 {
+	margin-left:40px !important;
+	margin-right:40px !important;
+	cursor:pointer !important;
+}
+
+#__tile0:hover, #__tile1:hover, #__tile2:hover, #__tile3:hover, #__tile4:hover, #__tile5:hover, #__tile6:hover, #__tile7:hover,  #__tile8:hover, #__tile9:hover {
+	box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.2);
+}
+
+#__tile0-img.sapUiIcon, #__tile1-img.sapUiIcon, #__tile2-img.sapUiIcon, #__tile3-img.sapUiIcon, #__tile4-img.sapUiIcon, #__tile5-img.sapUiIcon, #__tile6-img.sapUiIcon, #__tile7-img.sapUiIcon, #__tile8-img.sapUiIcon, #__tile9-img.sapUiIcon {
+	font-size: 9rem !important;
+	cursor:pointer !important;
+}
+
+.sapMTile:active #__tile0-img.sapUiIcon, .sapMTile:active #__tile1-img.sapUiIcon, .sapMTile:active #__tile2-img.sapUiIcon, .sapMTile:active #__tile3-img.sapUiIcon, .sapMTile:active #__tile4-img.sapUiIcon, .sapMTile:active #__tile5-img.sapUiIcon, .sapMTile:active #__tile6-img.sapUiIcon, .sapMTile:active #__tile7-img.sapUiIcon, .sapMTile:active #__tile8-img.sapUiIcon, .sapMTile:active #__tile9-img.sapUiIcon {
+	color: #fff !important;
+}
+
+#__tile2-img, #__tile3-img {
+	margin-left:5px !important;
+}
+
+#__tile4-img, #__tile5-img {
+	margin-left:-2px !important;
+}
+
+#__tile6-img, #__tile7-img {
+	margin-left: -10.5px !important;
+}
+
+#__tile8-img, #__tile9-img {
+	margin-top: 7px !important;
+	margin-left: -7px !important;
+}
+
+#__tile0-title.sapMStdTileTitle, #__tile1-title.sapMStdTileTitle, #__tile2-title.sapMStdTileTitle, #__tile3-title.sapMStdTileTitle, #__tile4-title.sapMStdTileTitle, #__tile5-title.sapMStdTileTitle, #__tile6-title.sapMStdTileTitle, #__tile7-title.sapMStdTileTitle, #__tile8-title.sapMStdTileTitle, #__tile9-title.sapMStdTileTitle {
+	margin-top:-20px !important;
+	margin-left:50px !important;
+	font-family: Verdana, Times, serif !important;
+	font-weight:600 !important;
+	color: #0854a0 !important;
+}
+
+.sapMTile:active #__tile0-title.sapMStdTileTitle, .sapMTile:active #__tile1-title.sapMStdTileTitle, .sapMTile:active #__tile2-title.sapMStdTileTitle, .sapMTile:active #__tile3-title.sapMStdTileTitle, .sapMTile:active #__tile4-title.sapMStdTileTitle, .sapMTile:active #__tile5-title.sapMStdTileTitle, .sapMTile:active #__tile6-title.sapMStdTileTitle, .sapMTile:active #__tile7-title.sapMStdTileTitle, .sapMTile:active #__tile8-title.sapMStdTileTitle, .sapMTile:active #__tile9-title.sapMStdTileTitle {
+	color: #fff !important;
+}
+
+#__tile2-title.sapMStdTileTitle, #__tile3-title.sapMStdTileTitle {
+	margin-left:42px !important;
+}
+
+#__tile4-title.sapMStdTileTitle, #__tile5-title.sapMStdTileTitle {
+	margin-left:35px !important;
+}
+
+#__tile6-title.sapMStdTileTitle, #__tile7-title.sapMStdTileTitle {
+	margin-left:50px !important;
+}
+
+#__tile8-title.sapMStdTileTitle, #__tile9-title.sapMStdTileTitle {
+	margin-left:45px !important;
+}

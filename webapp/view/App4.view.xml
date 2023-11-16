@@ -1,0 +1,43 @@
+<mvc:View controllerName="NGI1.Ferreterias.controller.App4" xmlns:l="sap.ui.layout" xmlns:u="sap.ui.unified" xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m" class="viewPadding">
+	<Page title="{i18n>salesPerDate}" backgroundDesign="List" navButtonPress="onNavPress" showNavButton="true">
+		<l:VerticalLayout>
+			<HBox>
+				<VBox justifyContent="Center">
+					<u:Calendar id="calendar" select="handleCalendarSelect" intervalSelection="true" weekNumberSelect="handleWeekNumberSelect"/>
+					<l:HorizontalLayout></l:HorizontalLayout>
+					<l:HorizontalLayout>
+						<VBox justifyContent="Center">
+							<Label text="{i18n>since}" labelFor="initDateInput"/>
+							<Input id="initDateInput" placeholder="{i18n>startDate}"></Input>
+							<HBox height="10px"></HBox>
+							<Label text="{i18n>until}" labelFor="lastDateInput"/>
+							<Input id="lastDateInput" placeholder="{i18n>endDate}"></Input>
+							<HBox height="20px"></HBox>
+							<Button press="onFilter" text="{i18n>buttonFilterDate}"></Button>
+						</VBox>
+					</l:HorizontalLayout>
+				</VBox>
+				<Table id="productsTable" mode="SingleSelectMaster" itemPress="handleListPress" inset="false" items="{mSalesSelected>/results}"
+			class="sapFDynamicPageAlignContent" width="auto">
+			<columns>
+				<Column width="12em">
+					<Text text="{i18n>IDVENTAS}"/>
+				</Column>
+				<Column hAlign="End">
+					<Text text="{i18n>FECHAS}"/>
+				</Column>
+			</columns>
+			<items>
+				<ColumnListItem>
+					<cells>
+						<ObjectIdentifier text="{mSalesSelected>IDVENTAS}"/>
+						<ObjectIdentifier text="{mSalesSelected>FECHAS}"/>
+					</cells>
+				</ColumnListItem>
+			</items>
+		</Table>
+			</HBox>
+		</l:VerticalLayout>
+	</Page>
+</mvc:View>

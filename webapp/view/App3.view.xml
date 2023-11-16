@@ -1,0 +1,19 @@
+<mvc:View controllerName="NGI1.Ferreterias.controller.App3" xmlns:l="sap.ui.layout" xmlns:mvc="sap.ui.core.mvc"
+	xmlns:core="sap.ui.core" xmlns="sap.m" height="100%">
+	<l:ResponsiveSplitter defaultPane="default">
+		<l:PaneContainer resize=".onRootContainerResize">
+			<l:SplitPane requiredParentWidth="300" id="default">
+					<mvc:XMLView viewName="NGI1.Ferreterias.view.App3Locals" />
+			</l:SplitPane>
+			<l:SplitPane requiredParentWidth="600">
+					<mvc:XMLView viewName="NGI1.Ferreterias.view.App3Products" />
+			</l:SplitPane>
+			<l:SplitPane requiredParentWidth="800">
+					<mvc:XMLView viewName="NGI1.Ferreterias.view.App3Stocks" />
+			</l:SplitPane>
+			<l:SplitPane requiredParentWidth="1000">
+					<mvc:XMLView viewName="NGI1.Ferreterias.view.App3Sales" />
+			</l:SplitPane>
+		</l:PaneContainer>
+	</l:ResponsiveSplitter>
+</mvc:View>

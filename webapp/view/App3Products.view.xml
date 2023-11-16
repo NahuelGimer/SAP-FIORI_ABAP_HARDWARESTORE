@@ -1,0 +1,58 @@
+<mvc:View controllerName="NGI1.Ferreterias.controller.App3" xmlns="sap.ui.table" xmlns:mvc="sap.ui.core.mvc" xmlns:u="sap.ui.unified"
+	xmlns:c="sap.ui.core" xmlns:m="sap.m" height="100%">
+	<m:Page title="{i18n>products}" id="page1" enableScrolling="false">
+		<m:HBox height="10px"></m:HBox>
+		<m:headerContent>
+			<m:HBox><m:Input id="innnpsut" width="8rem" placeholder="{i18n>XIXF}" description="{i18n>MRIP}" liveChange="onMaxRecordsChange1"/></m:HBox>
+		</m:headerContent>
+		<m:Panel>
+			<m:HBox justifyContent="Center">
+				<m:VBox>
+					<m:SearchField id="SearchField221" width="auto" search="handleSearchEspec" placeholder="{i18n>IDLOCAL}" showSearchButton="false"></m:SearchField>
+					<m:SearchField id="SearchField32" width="auto" search="handleSearchEspec" placeholder="{i18n>IDPRODUCTO}" showSearchButton="false"></m:SearchField>
+					<m:SearchField id="SearchField22" width="auto" search="handleSearchEspec" placeholder="{i18n>NOMBREPRODUCTO}" showSearchButton="false"></m:SearchField>
+					<m:SearchField id="SearchField22e" width="auto" search="handleSearchEspec" placeholder="{i18n>VALOR}" showSearchButton="false"></m:SearchField>
+				</m:VBox>
+				<m:HBox width="10px"></m:HBox>
+				<m:Button text="{i18n>buttonFilter}" press="onFilter1"></m:Button>
+			</m:HBox>
+		</m:Panel>
+		<m:HBox height="25px"></m:HBox>
+		<m:HBox justifyContent="End">
+			<m:Button icon="sap-icon://cart-2" press=".handleWizard"></m:Button>
+			<m:HBox width="17px"></m:HBox>
+		</m:HBox>
+		<m:HBox height="10px"></m:HBox>
+		<m:content>
+			<Table class="sapUiExploredNoMarginInfo" id="productsTable1" rows="{/PRODUCTOSet}" selectionMode="None" visibleRowCount="5"
+				ariaLabelledBy="title">
+				<columns>
+					<Column>
+						<m:Label text="{i18n>IDLOCAL}"/>
+						<template>
+							<m:Text text="{path:'IDLOCAL', formatter:'.formatter.formatInitZeros'}" wrapping="false"/>
+						</template>
+					</Column>
+					<Column>
+						<m:Label text="{i18n>IDPRODUCTO}"/>
+						<template>
+							<m:Text text="{path:'IDPRODUCTO', formatter:'.formatter.formatInitZeros'}" wrapping="false"/>
+						</template>
+					</Column>
+					<Column>
+						<m:Label text="{i18n>NOMBREPRODUCTO}"/>
+						<template>
+							<m:Text text="{NOMBREPRODUCTO}" wrapping="false"/>
+						</template>
+					</Column>
+					<Column>
+						<m:Label text="{i18n>VALOR}"/>
+						<template>
+							<m:Text text="$ {path:'VALOR', formatter:'.formatter.formatInitZeros'}" wrapping="false"/>
+						</template>
+					</Column>
+				</columns>
+			</Table>
+		</m:content>
+	</m:Page>
+</mvc:View>

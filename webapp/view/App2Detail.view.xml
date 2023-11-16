@@ -1,0 +1,86 @@
+<mvc:View controllerName="NGI1.Ferreterias.controller.App2" xmlns="sap.ui.table" xmlns:mvc="sap.ui.core.mvc" xmlns:m="sap.m" height="100%">
+	<m:Page showHeader="false" enableScrolling="false" class="sapUiContentPadding">
+		<m:content>
+			<m:HBox>
+				<Table id="table1" ariaLabelledBy="title" selectionMode="None" rows="{mLocalProductoStockVentas>/mLocalProductoStockVentas}"
+					visibleRowCount="1" enableColumnFreeze="false" showColumnVisibilityMenu="true">
+					<columns>
+						<Column width="auto" headerSpan="2">
+							<multiLabels>
+								<m:Label text="{i18n>LOCAL}" textAlign="Center" width="100%"/>
+								<m:Label text="{i18n>IDLOCAL}" textAlign="Center" width="100%"/>
+							</multiLabels>
+							<template>
+								<m:Text text="{path:'mLocalProductoStockVentas>IDLOCAL', formatter:'.formatter.formatInitZeros'}" wrapping="false"/>
+							</template>
+						</Column>
+						<Column width="auto" headerSpan="2">
+							<multiLabels>
+								<m:Label text="{i18n>LOCAL}"/>
+								<m:Label text="{i18n>NOMBRELOCAL}" textAlign="Center" width="100%"/>
+							</multiLabels>
+							<template>
+								<m:Text text="{mLocalProductoStockVentas>NOMBRELOCAL}" wrapping="false"/>
+							</template>
+						</Column>
+					</columns>
+				</Table>
+				<Table id="table2" ariaLabelledBy="title" selectionMode="None" rows="{mLocalProductoStockVentas>/mLocalProductoStockVentas}"
+					visibleRowCount="1" enableColumnFreeze="false" showColumnVisibilityMenu="true">
+					<columns>
+						<Column width="7em" headerSpan="3">
+							<multiLabels>
+								<m:Label text="{i18n>PRODUCTO}" textAlign="Center" width="100%"/>
+								<m:Label text="{i18n>IDPRODUCTO}" textAlign="Center" width="100%"/>
+							</multiLabels>
+							<template>
+								<m:Text text="{path:'mLocalProductoStockVentas>IDPRODUCTO', formatter:'.formatter.formatInitZeros'}" wrapping="false"/>
+							</template>
+						</Column>
+						<Column width="7em" headerSpan="3">
+							<multiLabels>
+								<m:Label text="{i18n>PRODUCTO}"/>
+								<m:Label text="{i18n>NOMBREPRODUCTO}" textAlign="Center" width="100%"/>
+							</multiLabels>
+							<template>
+								<m:Text text="{mLocalProductoStockVentas>NOMBREPRODUCTO}" wrapping="false"/>
+							</template>
+						</Column>
+						<Column width="7em" headerSpan="3">
+							<multiLabels>
+								<m:Label text="{i18n>PRODUCTO}"/>
+								<m:Label text="{i18n>VALOR}" textAlign="Center" width="100%"/>
+							</multiLabels>
+							<template>
+								<m:Text text="$ {path:'mLocalProductoStockVentas>VALOR', formatter:'.formatter.formatInitZeros'}" id="text001" wrapping="false"/>
+							</template>
+						</Column>
+					</columns>
+				</Table>
+				<Table id="table3" ariaLabelledBy="title" selectionMode="None" rows="{mLocalProductoStockVentas>/mLocalProductoStockVentas}"
+					visibleRowCount="1" enableColumnFreeze="false" showColumnVisibilityMenu="true">
+					<columns>
+						<Column width="auto" headerSpan="2">
+							<multiLabels>
+								<m:Label text="{i18n>STOCK}" textAlign="Center" width="100%"/>
+								<m:Label text="{i18n>IDSTOCK}" textAlign="Center" width="100%"/>
+							</multiLabels>
+							<template>
+								<m:Text text="{path:'mLocalProductoStockVentas>IDSTOCK', formatter:'.formatter.formatInitZeros'}" wrapping="false"/>
+							</template>
+						</Column>
+						<Column width="auto" headerSpan="2">
+							<multiLabels>
+								<m:Label text="{i18n>STOCK}"/>
+								<m:Label text="{i18n>CANTIDADSTOCK}" textAlign="Center" width="100%"/>
+							</multiLabels>
+							<template>
+								<m:Text text="{path:'mLocalProductoStockVentas>CANTIDADSTOCK', formatter:'.formatter.formatInitZeros'} u" wrapping="false"/>
+							</template>
+						</Column>
+					</columns>
+				</Table>
+			</m:HBox>
+		</m:content>
+	</m:Page>
+</mvc:View>

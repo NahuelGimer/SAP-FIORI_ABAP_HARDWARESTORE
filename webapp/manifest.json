@@ -1,0 +1,251 @@
+{
+	"_version": "1.12.0",
+	"sap.app": {
+		"id": "NGI1.Ferreterias",
+		"type": "application",
+		"i18n": "i18n/i18n.properties",
+		"applicationVersion": {
+			"version": "1.0.0"
+		},
+		"title": "{{appTitle}}",
+		"description": "{{appDescription}}",
+		"sourceTemplate": {
+			"id": "ui5template.basicSAPUI5ApplicationProject",
+			"version": "1.40.12"
+		},
+		"dataSources": {
+			"mainService": {
+				"uri": "/sap/opu/odata/sap/ZSM_FERRETERIA_NGI1_SRV/",
+				"type": "OData",
+				"settings": {
+					"localUri": "localService/metadata.xml",
+					"useBatch": false
+				}
+			}
+		}
+	},
+
+	"sap.ui": {
+		"technology": "UI5",
+		"icons": {
+			"icon": "",
+			"favIcon": "",
+			"phone": "",
+			"phone@2": "",
+			"tablet": "",
+			"tablet@2": ""
+		},
+		"deviceTypes": {
+			"desktop": true,
+			"tablet": true,
+			"phone": true
+		}
+	},
+
+	"sap.ui5": {
+		"flexEnabled": false,
+		"rootView": {
+			"viewName": "NGI1.Ferreterias.view.Master",
+			"type": "XML",
+			"async": true,
+			"id": "Master"
+		},
+		"dependencies": {
+			"minUI5Version": "1.65.6",
+			"libs": {
+				"sap.m": {},
+				"sap.f": {},
+				"sap.ui.core": {},
+				"sap.ui.layout": {},
+				"sap.ui.webc.main": {},
+				"sap.ui.table": {}
+			}
+		},
+		"config": {
+			"sample": {
+				"stretch": true,
+				"files": [
+					"Component.js",
+					"controller/App1.controller.js",
+					"view/App1.view.xml",
+					"controller/App1List.controller.js",
+					"view/App1List.view.xml",
+					"controller/App1Detail.controller.js",
+					"view/App1Detail.view.xml",
+					"manifest.json"
+				]
+			}
+		},
+		"contentDensities": {
+			"compact": true,
+			"cozy": true
+		},
+		"models": {
+			"i18n": {
+				"type": "sap.ui.model.resource.ResourceModel",
+				"settings": {
+					"bundleName": "NGI1.Ferreterias.i18n.i18n"
+				}
+			},
+			"App1TableDetail": {
+				"type": "sap.ui.model.json.JSONModel",
+				"settings": {},
+				"uri": "App1TableDetail.json",
+				"preload": false
+			},
+			"App3": {
+				"type": "sap.ui.model.json.JSONModel",
+				"settings": {},
+				"uri": "App3.json",
+				"preload": false
+			},
+			"mLocalProductoStockVentas": {
+				"type": "sap.ui.model.json.JSONModel",
+				"settings": {},
+				"uri": "mLocalProductoStockVentas.json",
+				"preload": false
+			},
+			"": {
+				"type": "sap.ui.model.odata.v2.ODataModel",
+				"dataSource": "mainService",
+				"preload": true,
+				"settings": {
+					"defaultOperationMode": "Server",
+					"defaultBindingMode": "OneWay",
+					"defaultCountMode": "Request"
+				}
+			}
+		},
+		"resources": {
+			"css": [{
+				"uri": "css/style.css"
+			}]
+		},
+		"routing": {
+			"config": {
+				"routerClass": "sap.m.routing.Router",
+				"viewType": "XML",
+				"async": true,
+				"viewPath": "NGI1.Ferreterias.view",
+				"controlAggregation": "pages",
+				"controlId": "app",
+				"clearControlAggregation": false
+			},
+			"routes": [{
+				"name": "RouteMaster",
+				"pattern": "",
+				"target": ["TargetMaster"]
+			}, {
+				"name": "RouteApp1",
+				"pattern": "App1",
+				"target": ["App1"]
+			}, {
+				"name": "RouteApp2",
+				"pattern": "App2",
+				"target": ["App2"]
+			}, {
+				"name": "RouteApp3",
+				"pattern": "App3",
+				"target": ["App3"]
+			}, {
+				"name": "RouteApp3Wizard",
+				"pattern": "App3SellProductWizard",
+				"target": ["App3SellProductWizard"]
+			}, {
+				"name": "RouteApp4",
+				"pattern": "App4",
+				"target": ["App4"]
+			}, {
+				"name": "RouteApp5",
+				"pattern": "App5",
+				"target": ["App5"]
+			}],
+			"targets": {
+				"TargetMaster": {
+					"viewType": "XML",
+					"transition": "slide",
+					"clearControlAggregation": false,
+					"viewId": "",
+					"viewName": "Master"
+				},
+				"App1": {
+					"viewType": "XML",
+					"transition": "slide",
+					"clearControlAggregation": false,
+					"viewId": "App1",
+					"viewName": "App1"
+				},
+				"App2": {
+					"viewType": "XML",
+					"transition": "slide",
+					"clearControlAggregation": false,
+					"viewId": "App2",
+					"viewName": "App2"
+				},
+				"App2Detail": {
+					"viewType": "XML",
+					"transition": "slide",
+					"clearControlAggregation": false,
+					"viewId": "App2SubViewDetail",
+					"viewName": "App2SubViewDetail"
+				},
+				"App3": {
+					"viewType": "XML",
+					"transition": "slide",
+					"clearControlAggregation": false,
+					"viewId": "App3",
+					"viewName": "App3"
+				},
+				"App3Locals": {
+					"viewType": "XML",
+					"transition": "slide",
+					"clearControlAggregation": false,
+					"viewId": "App3Locals",
+					"viewName": "App3Locals"
+				},
+				"App3Products": {
+					"viewType": "XML",
+					"transition": "slide",
+					"clearControlAggregation": false,
+					"viewId": "App3Products",
+					"viewName": "App3Products"
+				},
+				"App3Stocks": {
+					"viewType": "XML",
+					"transition": "slide",
+					"clearControlAggregation": false,
+					"viewId": "App3Stocks",
+					"viewName": "App3Stocks"
+				},
+				"App3Sales": {
+					"viewType": "XML",
+					"transition": "slide",
+					"clearControlAggregation": false,
+					"viewId": "App3Sales",
+					"viewName": "App3Sales"
+				},
+				"App3SellProductWizard": {
+					"viewType": "XML",
+					"transition": "slide",
+					"clearControlAggregation": false,
+					"viewId": "App3SellProductWizard",
+					"viewName": "App3SellProductWizard"
+				},
+				"App4": {
+					"viewType": "XML",
+					"transition": "slide",
+					"clearControlAggregation": false,
+					"viewId": "App4",
+					"viewName": "App4"
+				},
+				"App5": {
+					"viewType": "XML",
+					"transition": "slide",
+					"clearControlAggregation": false,
+					"viewId": "App5",
+					"viewName": "App5"
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,43 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns1="sap.ui.webc.main" xmlns:tnt="sap.tnt" xmlns:f="sap.ui.layout.form" xmlns:l="sap.ui.layout"
+	xmlns:mvc="sap.ui.core.mvc" xmlns:fiori="sap.ui.webc.fiori" xmlns:core="sap.ui.core">
+	<Dialog id="mainDialog" titleAlignment="Center">
+		<content>
+			<VBox class="sapUiSmallMargin" id="formContainer" justifyContent="Center">
+				<f:SimpleForm id="SimpleFormChangeColumn_twoGroups234" layout="ResponsiveGridLayout" editable="true" columnsM="1" columnsL="1" columnsXL="1">
+					<f:content>
+						<core:Title class="sapUiExploredNoMarginInfo" text="{i18n>labelLocal}"/>
+						<Label showColon="false" displayOnly="true" text="{i18n>labelIdLocal}" wrapping="true" wrappingType="Hyphenated"/>
+						<Input placeholder="{i18n>labelEIdLocal}" class="sapUiSmallMarginBottom" name="input01" id="input1" enabled="false" type="Number" maxLength="3"
+							required="true" change="onChange"/>
+						<Label displayOnly="true" text="{i18n>labelNameLocal}" wrapping="true" wrappingType="Hyphenated"/>
+						<Input placeholder="{i18n>labelENameLocal}" name="input02" id="input4" enabled="false" type="Text" maxLength="30" required="true"
+							change="onChange"/>
+						<core:Title class="sapUiExploredNoMarginInfo" text="{i18n>labelProduct}"/>
+						<Label displayOnly="true" text="{i18n>labelIdProduct}" wrapping="true" wrappingType="Hyphenated"/>
+						<Input placeholder="{i18n>labelEIdProduct}" value="{mPRODUCTOSTOCK>/PRODUCTO/IDPRODUCTO}" class="sapUiSmallMarginBottom" name="input03" id="input2"
+							valueStateText="{i18n>IDProperties}" valueState="Information" required="true" type="Number" maxLength="3" change="onChange"/>
+						<Label displayOnly="true" text="{i18n>labelNameProduct}" wrapping="true" wrappingType="Hyphenated"/>
+						<Input placeholder="{i18n>labelENameProduct}" value="{mPRODUCTOSTOCK>/PRODUCTO/NOMBREPRODUCTO}" class="sapUiSmallMarginBottom" name="input04" id="input5"
+							valueStateText="{i18n>nameProperties}" valueState="Information" required="true" type="Text" maxLength="30" change="onChange"/>
+						<Label displayOnly="true" text="{i18n>labelValue}" wrapping="true" wrappingType="Hyphenated"/>
+						<Input placeholder="{i18n>labelEValue}" value="{mPRODUCTOSTOCK>/PRODUCTO/VALOR}" name="input05" id="input6" valueStateText="{i18n>valueProperties}"
+							valueState="Information" required="true" type="Number" maxLength="7" change="onChange"/>
+						<Label displayOnly="true" text="{i18n>labelStock}" wrapping="true" wrappingType="Hyphenated"/>
+						<Input placeholder="{i18n>labelEStock}" value="{mPRODUCTOSTOCK>/STOCK/CANTIDADSTOCK}" class="sapUiSmallMarginBottom" name="input07" id="input7"
+							valueStateText="{i18n>stockProperties}" valueState="Information" required="true" type="Number" maxLength="5" change="onChange"/>
+					</f:content>
+				</f:SimpleForm>
+			</VBox>
+		</content>
+		<footer>
+			<Toolbar>
+				<content>
+					<Button id="messagePopoverBtn" press=".handleMessagePopoverPress" ariaHasPopup="Dialog"/>
+					<ToolbarSpacer/>
+					<Button text="{i18n>buttonAcceptProduct}" press="._openDialogAddProduct"/>
+					<Button id="Reject" text="{i18n>buttonCancel}" press="._closeDialogAddProduct" ariaHasPopup="Dialog"/>
+				</content>
+			</Toolbar>
+		</footer>
+	</Dialog>
+</core:FragmentDefinition>

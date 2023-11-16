@@ -1,0 +1,17 @@
+<mvc:View controllerName="NGI1.Ferreterias.controller.Master" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m"
+	xmlns:l="sap.ui.layout">
+	<Shell id="shell">
+		<App id="app">
+			<TileContainer>
+				<StandardTile class="sapUiTinyMarginBegin sapUiMediumMarginTop tileLayout tileStyle" title="{i18n>sales}" press="toApp1"
+					icon="sap-icon://sales-document" type="Monitor"/>
+				<StandardTile class="sapUiTinyMarginBegin sapUiMediumMarginTop tileLayout tileStyle" title="{i18n>zSales}" press="toApp4"
+					icon="sap-icon://simple-payment" type="Monitor"/>
+				<StandardTile class="sapUiTinyMarginBegin sapUiMediumMarginTop tileLayout tileStyle" title="{i18n>products}" press="toApp2"
+					icon="sap-icon://product" type="Monitor"/>
+				<StandardTile class="sapUiTinyMarginBegin sapUiMediumMarginTop tileLayout tileStyle" title="{i18n>global}" press="toApp3"
+					icon="sap-icon://world" type="Monitor"/>
+			</TileContainer>
+		</App>
+	</Shell>
+</mvc:View>

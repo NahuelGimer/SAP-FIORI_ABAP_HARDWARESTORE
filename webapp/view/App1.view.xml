@@ -1,0 +1,7 @@
+<mvc:View xmlns="sap.f" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" controllerName="NGI1.Ferreterias.controller.App1" height="100%">
+	<FlexibleColumnLayout id="fcl">
+		<beginColumnPages>
+			<mvc:XMLView id="beginView" async="true" viewName="NGI1.Ferreterias.view.App1Table"/>
+		</beginColumnPages>
+	</FlexibleColumnLayout>
+</mvc:View>

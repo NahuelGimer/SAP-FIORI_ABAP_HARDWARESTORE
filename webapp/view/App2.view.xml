@@ -1,0 +1,54 @@
+<mvc:View controllerName="NGI1.Ferreterias.controller.App2" xmlns:u="sap.ui.unified" xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc"
+	xmlns:core="sap.ui.core" xmlns:f="sap.ui.layout.form" xmlns:l="sap.ui.layout"
+	xmlns:custom="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1">
+	<SplitApp id="SplitAppDemo" initialDetail="detail" initialMaster="master">
+		<masterPages>
+			<Page id="master" title="{i18n>locals}" backgroundDesign="List" navButtonPress="onNavPress" showNavButton="true">
+				<headerContent>
+					<u:FileUploader id="fileUpload" placeholder="{i18n>placeholderExcel}" iconOnly="true" buttonOnly="true" icon="sap-icon://excel-attachment"
+						multiple="true" sameFilenameAllowed="true" fileType="xlsx,xls" change=".uploadExcelModel"/>
+				</headerContent>
+				<Panel>
+					<HBox height="30px" justifyContent="Center">
+						<SearchField id="SearchField" width="auto" search="handleSearchEspec" placeholder="{i18n>NOMBRELOCAL}" showSearchButton="false"></SearchField>
+						<HBox width="15px"></HBox>
+						<Button text="{i18n>buttonFilter}" press="onFilter"></Button>
+					</HBox>
+				</Panel>
+				<List id="wdqqdw" items="{/LOCALSet}">
+					<infoToolbar>
+						<OverflowToolbar visible="false" id="idInfoToolbar">
+							<Label id="idFilterLabel"/>
+						</OverflowToolbar>
+					</infoToolbar>
+					<StandardListItem type="Navigation" press=".onPressGoToMaster" title="{NOMBRELOCAL}"/>
+				</List>
+			</Page>
+			<Page id="master2" backgroundDesign="List" showNavButton="true" navButtonPress=".onPressMasterBack">
+				<headerContent>
+					<Button icon="sap-icon://add" press=".onOpenPopoverDialog"></Button>
+				</headerContent>
+				<Panel>
+					<HBox height="30px" justifyContent="Center">
+						<SearchField id="SearchField1" width="auto" search="handleSearchEspec" placeholder="{i18n>NOMBREPRODUCTO}" showSearchButton="false"></SearchField>
+						<HBox width="15px"></HBox>
+						<Button text="{i18n>buttonFilter}" press="onFilter1"></Button>
+					</HBox>
+				</Panel>
+				<List id="EQWEQ" items="{/PRODUCTOSet}" selectionChange=".onPressListItem1" mode="Delete" delete="deleteProduct">
+					<infoToolbar>
+						<OverflowToolbar visible="false" id="idInfoToolbar2">
+							<Label id="idFilterLabel2"/>
+						</OverflowToolbar>
+					</infoToolbar>
+					<StandardListItem type="Navigation" press="onPressListItem1" title="{NOMBREPRODUCTO}"/>
+				</List>
+			</Page>
+		</masterPages>
+		<detailPages>
+			<Page id="detail" title="{i18n>productDetail}" backgroundDesign="Solid">
+				<mvc:XMLView viewName="NGI1.Ferreterias.view.App2Detail"/>
+			</Page>
+		</detailPages>
+	</SplitApp>
+</mvc:View>

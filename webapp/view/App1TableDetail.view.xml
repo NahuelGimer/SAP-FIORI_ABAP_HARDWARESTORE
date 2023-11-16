@@ -1,0 +1,35 @@
+<mvc:View xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" controllerName="NGI1.Ferreterias.controller.App1TableDetail"
+	height="100%">
+	<Page id="detailPage"
+		title="{i18n>salesOfLocal} {mLocalProductoStockVentas>/mLocalProductoStockVentas/0/NOMBRELOCAL} {i18n>ofID} {mLocalProductoStockVentas>/mLocalProductoStockVentas/0/IDLOCAL} ({= ${mLocalProductoStockVentas>/mLocalProductoStockVentas}.length})">
+		<Panel>
+			<HBox justifyContent="Center">
+				<VBox>
+					<SearchField id="SearchField3" width="auto" search="handleSearchEspec" placeholder="{i18n>IDVENTAS}" showSearchButton="false"></SearchField>
+					<SearchField id="SearchField2" width="auto" search="handleSearchEspec" placeholder="{i18n>PRODUCTOVENDIDO}" showSearchButton="false"></SearchField>
+				</VBox>
+				<HBox width="10px"></HBox>
+				<Button text="{i18n>buttonFilter}" press="onFilter"></Button>
+			</HBox>
+		</Panel>
+		<Table id="productsTableDetail" mode="SingleSelectMaster" itemPress="handleListPress" inset="false"
+			items="{mLocalProductoStockVentas>/mLocalProductoStockVentas}" class="sapFDynamicPageAlignContent" width="auto">
+			<columns>
+				<Column width="12em">
+					<Text text="{i18n>IDVENTAS}"/>
+				</Column>
+				<Column hAlign="End">
+					<Text text="{i18n>PRODUCTOVENDIDO}"/>
+				</Column>
+			</columns>
+			<items>
+				<ColumnListItem>
+					<cells>
+						<ObjectIdentifier text="{path:'mLocalProductoStockVentas>IDVENTAS', formatter:'.formatter.formatInitZeros'}"/>
+						<ObjectIdentifier text="{mLocalProductoStockVentas>PRODUCTOVENDIDO}"/>
+					</cells>
+				</ColumnListItem>
+			</items>
+		</Table>
+	</Page>
+</mvc:View>

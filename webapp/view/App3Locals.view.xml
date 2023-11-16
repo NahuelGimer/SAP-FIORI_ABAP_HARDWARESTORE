@@ -1,0 +1,39 @@
+<mvc:View controllerName="NGI1.Ferreterias.controller.App3" xmlns="sap.ui.table" xmlns:mvc="sap.ui.core.mvc" xmlns:u="sap.ui.unified"
+	xmlns:c="sap.ui.core" xmlns:m="sap.m" height="100%">
+	<m:Page enableScrolling="false" title="{i18n>locals}" id="page" navButtonPress="onNavPress" showNavButton="true">
+		<m:HBox height="10px"></m:HBox>
+		<m:headerContent>
+			<m:HBox><m:Input id="innnput" width="8rem" placeholder="{i18n>XIXF}" description="{i18n>MRIL}" liveChange="onMaxRecordsChange"/></m:HBox>
+		</m:headerContent>
+		<m:Panel>
+			<m:HBox justifyContent="Center">
+				<m:VBox>
+					<m:SearchField id="SearchField24" width="auto" search="handleSearchEspec" placeholder="{i18n>IDLOCAL}" showSearchButton="false"></m:SearchField>
+					<m:SearchField id="SearchField34" width="auto" search="handleSearchEspec" placeholder="{i18n>NOMBRELOCAL}" showSearchButton="false"></m:SearchField>
+				</m:VBox>
+				<m:HBox width="10px"></m:HBox>
+				<m:Button text="{i18n>buttonFilter}" press="onFilter"></m:Button>
+			</m:HBox>
+		</m:Panel>
+		<m:HBox height="25px"></m:HBox>
+		<m:content>
+			<Table class="sapUiExploredNoMarginInfo" id="productsTable" rows="{/LOCALSet}" selectionMode="None" visibleRowCount="5"
+				ariaLabelledBy="title">
+				<columns>
+					<Column>
+						<m:Label text="{i18n>IDLOCAL}"/>
+						<template>
+							<m:Text text="{path:'IDLOCAL', formatter:'.formatter.formatInitZeros'}" wrapping="false"/>
+						</template>
+					</Column>
+					<Column>
+						<m:Label text="{i18n>NOMBRELOCAL}"/>
+						<template>
+							<m:Text text="{NOMBRELOCAL}" wrapping="false"/>
+						</template>
+					</Column>
+				</columns>
+			</Table>
+		</m:content>
+	</m:Page>
+</mvc:View>
