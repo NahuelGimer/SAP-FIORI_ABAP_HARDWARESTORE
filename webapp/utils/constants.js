@@ -6,7 +6,7 @@ sap.ui.define([], function () {
 				controllers: {
 					Master: "NGI1.Ferreterias.controller.Master",
 					App1Controller: "NGI1.Ferreterias.controller.App1",
-					App1TableController: "NGI1.Ferreterias.controller.App1Table",
+					App1Table: "NGI1.Ferreterias.controller.App1Table",
 					App1TableDetail: "NGI1.Ferreterias.controller.App1TableDetail",
 					App2: "NGI1.Ferreterias.controller.App2",
 					App3: "NGI1.Ferreterias.controller.App3",
