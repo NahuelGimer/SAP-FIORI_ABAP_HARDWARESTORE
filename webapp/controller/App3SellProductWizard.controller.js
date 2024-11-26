@@ -36,7 +36,6 @@ sap.ui.define([
 				this.getView().setModel(oModelValidations, "mValidations");
 			},
 			onNavPress: function () {
-				debugger;
 				var oHistory = History.getInstance();
 				var sPreviousHash = oHistory.getPreviousHash();
 				if (sPreviousHash !== undefined || !oCrossAppNavigator.isInitialNavigation()) {
