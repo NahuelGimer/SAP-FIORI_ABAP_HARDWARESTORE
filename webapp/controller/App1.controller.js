@@ -34,7 +34,7 @@ sap.ui.define([
 			};
 			this._loadView({
 				id: "midView",
-				viewName: "constants.model.routes.controllers.App1TableDetail"
+				viewName: "NGI1.Ferreterias.view.App1TableDetail"
 			}).then(function (detailView) {
 				this.oFlexibleColumnLayout.addMidColumnPage(detailView);
 				this.oFlexibleColumnLayout.setLayout(LayoutType.TwoColumnsBeginExpanded);
