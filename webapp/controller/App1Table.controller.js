@@ -17,7 +17,6 @@ sap.ui.define([
 	return Controller.extend("constants.model.routes.controllers.App1Table", {
 		formatter: formatter,
 		onInit: function () {
-			console.log("hola");
 			let oModel = new sap.ui.model.json.JSONModel([]);
 			this.getView().setModel(oModel, "mLocalProductoStockVentas");
 			this.oLocal = {
